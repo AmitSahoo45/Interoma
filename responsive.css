@@ -1,0 +1,71 @@
+:root {
+    --black: #040d07;
+    --light-pink: #fddedf;
+    --pale-yellow: #feab20;
+    --dirty-grey: #b7ae9f;
+    --dark-brown: #5d4c38;
+    --natural-green: #54a33a;
+    --beige-yellow: #b35d34;
+    --wheat-yellow: #b09169;
+    --great-vibes-font: 'Great Vibes', cursive;
+    --monsterrat-font: 'Montserrat', sans-serif;
+    --open-sans: 'Open Sans', sans-serif;
+}
+
+@media only screen and (max-width: 825px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 6.4rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+            padding-left: 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        z-index: 10;
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        z-index: 10;
+    }
+
+    .other-links {
+        flex-wrap: wrap;
+    }
+
+    .other-links a {
+        margin: 0 0.6rem;
+    }
+
+    .dropdown-content.current{
+        background-color: #ffffffc7;
+        max-width: 300px;
+    }
+}
